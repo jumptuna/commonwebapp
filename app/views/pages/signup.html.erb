@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+  <title>Sign Up</title>
+
+  <style>
+  .bg-hero {
+    text-align: center;
+    font-size: 18pt;
+  }
+  .buffer {
+    height:1em;
+    width: 100%;
+  }
+  .inner {
+    border-bottom-width: .1em;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+  }
+  .btn {
+    padding-right: 3em;
+    padding-left: 3em;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+  }
+  .form {
+    font-size: 14pt;
+  }
+  .field2{
+    height: 10em;
+    overflow: auto;
+
+  }
+
+  </style>
+</head>
+<body>
+<section class="section section-community full-width">
+    <div class="bg-hero">
+        <div class="inner">
+            <h2>Sign Up</h2>
+
+            <p>
+                At Common, you’re not just a member — you’re part of a community that cares.
+                <p>
+                Here you can view other members in your area, see their interests, and contact them before you move in.</p>
+            </p>
+
+            
+        </div>
+        
+        <%= render "users/registrations/new" %>
+        
+        <div type="buttons" class="btn btn-default">
+                <%=link_to 'Back', home_path %> 
+
+            </div>
+            
+        
+    </div>
+
+</section>
+
+
+
+
+</body>
+</html>

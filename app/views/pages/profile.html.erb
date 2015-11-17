@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+  <title></title>
+
+  <style>
+  html, body {
+    margin:0;
+    height: 100%;
+    
+  }
+  .background {
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url("http://www.patriciagross.ca/images/bottom-background.png");
+    
+  }
+  .atliens {
+    text-align: center;
+    font-size: 18pt;
+    height: 25em;
+    border-top-color: black;
+    border-top-style: solid;
+    border-top-width: .1em;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: .1em;
+    margin-top: 2em;
+    background-color: white;
+  }
+  .list {
+    font-size: 9pt;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: .7em;
+    margin-left: 10em;
+    margin-top: 2em;
+    height: 30em;
+    width: 12em;
+  }
+  .profile {
+    font-size: 9pt;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: .7em;
+    margin-left: 10em;
+    margin-top: 2em;
+    height: 12em;
+    width: 12em;
+    padding:0;
+  }
+  .header {
+    font-size: 9pt;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: .7em;
+    height: 12em;
+    width: 76em;
+    margin-left: 2em;
+    margin-top: 2em;
+    text-align: left;
+    
+  }
+  .label {
+    font-size: 9pt;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: .7em;
+    height: 4em;
+    width: 8em;
+    margin-left: 2em;
+    margin-top: 2em;
+    color: black;
+
+    
+   
+  }
+  .sect {
+    font-size: 9pt;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+    border-radius: .7em;
+    height: 30em;
+    width: 66em;
+    margin-left: 2em;
+    margin-top: 2em;
+    text-align: left;
+    
+
+  }
+  
+ 
+  
+    
+
+  </style>
+</head>
+<body>
+
+  <div class = "background">
+  <!-- <section class="section section-community full-width"> -->
+
+    <div class="atliens">
+        <div class ="col-sm-2 profile">
+          Profile Image
+
+
+        </div>
+        <div class ="col-sm-8 header">
+          <%= @cuser.name %>
+          
+
+
+        </div>
+        <div class ="col-sm-2 list">
+          <p></p>
+          <%= render "users/list/list" %>
+
+
+        </div>
+        
+        <div class ="col-sm-1 label">
+        <p></p>
+            Bio
+          
+
+
+        </div>
+        <div class ="col-sm-6 sect">
+
+
+          <%= @cuser.info %>
+
+
+          
+
+
+
+        </div>
+          
+
+
+        
+
+          
+
+
+         
+    </div>
+  <div class = "col-sm-2">
+  <%= link_to "Sign Out", signout_path %>
+</div>
+  </div>
+
+
+
+
+</body>
+</html>

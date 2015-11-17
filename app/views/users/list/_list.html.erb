@@ -1,0 +1,9 @@
+<%= x = 0 %>
+<% @users.each do |user| %>
+	<%= x+=1 %>
+
+    <p>
+       <%= link_to user.name.html_safe, { :action => "profile", :id => x }%>
+    </p>
+    
+<% end %>
