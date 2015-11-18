@@ -2,8 +2,7 @@ class PagesController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   def home
-    if @signedin
-    else
+    if @signedin == true or current_user != nil
       redirect_to profile_path
     end
   end
@@ -34,7 +33,7 @@ class PagesController < ActionController::Base
      
     end
 
-    params[:id] = 0
+    params[:id] = nil
     @signedin=true
   
     
@@ -44,9 +43,15 @@ class PagesController < ActionController::Base
 
   def signout
     sign_out current_user
-    redirect_to home_path
     @id = 0
     @signedin = false
+    redirect_to home_path
+    
+  end
+
+  def currentuser
+    params[:id] = nil
+    redirect_to profile_path
   end
    
   protect_from_forgery with: :exception

@@ -1,9 +1,9 @@
-<%= x = 0 %>
+<% @x = 0 %>
 <% @users.each do |user| %>
-	<%= x+=1 %>
-
+	<% @x+=1 %>
+	<div class = "col-sm-3 people">
     <p>
-       <%= link_to user.name.html_safe, { :action => "profile", :id => x }%>
+       <%= link_to user.name.html_safe, { :action => "profile", :id => @x }%>
     </p>
-    
+    </div>
 <% end %>

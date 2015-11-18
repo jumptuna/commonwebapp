@@ -7,15 +7,16 @@
   <title>Sign In</title>
 
   <style>
+  body {
+    /*background-image: url("http://images.123hdwallpapers.com/20150430/city-background-hd-1600x1000.jpg");*/
+  }
   .bg-hero {
     text-align: center;
     font-size: 18pt;
+    
+
   }
-  .inner {
-    border-bottom-width: .1em;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-  }
+  
   .btn {
     padding-right: 3em;
     padding-left: 3em;
@@ -24,34 +25,81 @@
   }
    .form {
     font-size: 14pt;
+    
   }
   .buffer {
     height:1em;
     width: 100%;
   }
+  .inner {
+  
+    float: right;
+    margin: 0 auto;
+    margin-top: 0;
+    z-index: 999;
+    background-color: white;
+    opacity: 10%;
+    height: 3em;
+    width: 100%;
+    position: fixed;
+
+    
+  }
+    .logo{
+    
+    opacity: 100%;
+    margin-right: 28em;
+  }
+  .l, .si, .su{
+    opacity: 100%;
+    font-size: 18px;
+    margin-right: 5em;
+    color: black;
+    font-weight: lighter;
+    font-style: arial;
+  }
+  .buff{
+    height: .75em;
+  }
+  .run{
+    margin-top: 5em;
+    height: 14em;
+    
+    margin-left: 18.5em;
+    border-radius: 1em;
+  }
+
+ 
 </style>
 </head>
 <body>
-<section class="section section-community full-width">
+
     <div class="bg-hero">
         <div class="inner">
-            <h2>Sign In</h2>
+           <div class = "buff">
+            </div>
 
-            <p>
-                At Common, you’re not just a member — you’re part of a community that cares.
-                <p>
-                Here you can view other members in your area, see their interests, and contact them before you move in.</p>
-            </p>
+            
+              <%= link_to image_tag('top_logo.png'), home_path, {:class => "logo"} %>
+            
+              
+            
+            
+              <%=link_to 'Sign Up', signup_path, {:class => "su"} %>   <%=link_to 'Sign In', signin_path, {:class => "si"} %>    <%=link_to 'Members', list_path, {:class => "l"} %> 
+            
             
         
         </div>
-        <div class = "form">
+        <div class = "col-sm-4 run">
+        <p>
+        </p>
+
         <%= render "users/sessions/new" %>
         </div>
+       
         <div type="buttons" class="btn btn-default">
 
                 <%=link_to 'Back', home_path %> 
             </div>
 
     </div>
-</section>

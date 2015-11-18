@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -31,10 +31,7 @@
     <%= f.text_field :info, autocomplete: "off" %>
   </div>
 
-
   <div class="actions">
    <%= f.submit 'Sign Up', data: { confirm: 'Your confirm message' } %>
   </div>
 <% end %>
-
-<%= render "users/shared/links" %>

@@ -12,68 +12,209 @@
     font-size: 18pt;
   }
   .inner {
-    border-bottom-width: .1em;
-    border-bottom-style: solid;
-    border-bottom-color: black;
+  
+    float: right;
+    margin: 0 auto;
+    margin-top: 0;
+    z-index: 999;
+    background-color: white;
+    opacity: 10%;
+    height: 3em;
+    width: 100%;
+    position: fixed;
+
     
   }
   .btn {
   	padding-right: 3em;
-  	padding-left: 3em;
-  	padding-bottom: 1.5em;
-  	padding-top: 1.5em;
+  	padding-left: .5em;
+  	padding-bottom: .1em;
+  	padding-top: .1em;
   }
   .buffer{
   	height:4em;
   	width: 100%;
   }
-  
+  .lettering {
+    opacity: 100%;
+    font-size: 13pt;
+    text-align: left;
+    width: 10em;
+    margin: 0em;
+  }
+  .lettering2{
+    opacity: 100%;
+    font-size: 13pt;
+    
+    padding-right: 5em;
+    color: white;
+    margin-right:0em;
+    width: 15em;
+  }
+  .buff{
+    height: .75em;
+  }
+  .logo{
+    
+    opacity: 100%;
+    margin-right: 28em;
+  }
+  .l, .si, .su{
+    opacity: 100%;
+    font-size: 18px;
+    margin-right: 5em;
+    color: black;
+    font-weight: lighter;
+    font-style: arial;
+  }
+  .headerimage{
+    
+    
+    margin-top: 0%;
+    float: right;
+    height: 32em;
+    width: 55em;
+
     
 
+  }
+  .otext {
+    background-image: url("http://orig15.deviantart.net/70d4/f/2012/108/8/6/teal_windows_8_bubbles_background_by_gifteddeviant-d4wkij8.png");
+    height: 10em;
+    text-align: center;
+    font-size: 26px;
+    display:inline-block;
+    color: white;
+    font-weight: lighter;
+    
+
+
+
+  }
+  .buffer {
+    height: 3.2em;
+  }
+  .one, .two, .three{
+    height: 11em;
+    width: 11em;
+    border-radius: 10em;
+    text-align: center;
+
+  }
+  .blogone{
+    
+    font-weight: lighter;
+    
+    text-align: center;
+    margin: 0 auto;
+    width: 11em;
+    padding-top: 2em;
+    height: 10em;
+  }
+  .blog{
+    width:11em;
+    margin-left: 14.65em;
+  }
+  .title{
+    text-align: center;
+    font-size: 18pt;
+    font-weight: lighter;
+    
+    padding-bottom: 2em;
+  }
+  .buffed{
+    height: 10em;
+
+  }
+
   </style>
+  
 </head>
 <body>
-<section class="section section-community full-width">
+
     <div class="bg-hero">
         <div class="inner">
-            <h2>Home</h2>
+            
+            <div class = "buff">
+            </div>
 
-            <p>
+            
+              <%= link_to image_tag('top_logo.png'), home_path, {:class => "logo"} %>
+            
+              
+            
+            
+              <%=link_to 'Sign Up', signup_path, {:class => "su"} %>   <%=link_to 'Sign In', signin_path, {:class => "si"} %>    <%=link_to 'Members', list_path, {:class => "l"} %> 
+            
+           
+        </div>
+        
+        
+        <%= image_tag("bcg_hero_membership_community", :class => "headerimage")%>
+       
+        <!-- <div class "wraphi">
+        <%= image_tag("bcg_hero_membership", :class => "headerimage")%>
+        </div>
+         -->
+
+
+        
+        
+           
+        
+    </div>
+
+
+
+    <div class = "col-sm-12 otext">
+    <div class = "buffer">
+            </div>
+                <p>
                 At Common, you’re not just a member — you’re part of a community that cares.
                 <p>
                 Here you can view other members in your area, see their interests, and contact them before you move in.</p>
-            </p>
-
-
-            
-        </div>
-
-        <div class ="buffer">
-
-        </div>
-        <div type="buttons" class="btn btn-default">
-                <%=link_to 'Sign Up', signup_path %> 
-            </div>
-        <div class ="buffer">
-
-        </div>
-        <div type="buttons" class="btn btn-default">
-                <%=link_to 'Sign In', signin_path %> 
-            </div>
-             <div class ="buffer">
-
-        </div>
-            <div type="buttons" class="btn btn-default">
-                <%=link_to 'List', list_path %> 
-            </div>
-            <div class ="buffer">
-
-        </div>
-        <div type="buttons" class="btn btn-default">
-                <%=link_to 'profile', profile_path %> 
-            </div>
+                </p>
     </div>
-</section>
+    <%= image_tag("Screen Shot 2015-11-16 at 3.32.18 PM", :class => "testimonial")%>
+    
+    <!-- REPLACE BLOG POSTS AS MORE IMPORTANT ONES APPEAR -->
+
+    <div class = "title">
+        <p>
+        Check out our blog
+        </p>
+    </div>
+    
+    <div class = "col-sm-2 blog">
+      
+      <%= link_to image_tag('ONBOARD.jpg', :class => "one"), "http://blog.hicommon.com/2015/11/how-we-onboard-members/" %>
+      <div class ="blogone">
+      
+      How We Onboard Members
+      </div>
+
+    </div>
+    
+    <div class = "col-sm-2 blog">
+      
+      <%= link_to image_tag('1162.jpg', :class => "two"), "http://blog.hicommon.com/2015/10/hello-1162-pacific-street/" %>
+      <div class ="blogone">
+      Hello 1162 Pacific Street
+      </div>
+    </div>
+    
+    <div class = "col-sm-2 blog">
+      
+      <%= link_to image_tag('moneybag.jpg', :class => "three"), "http://blog.hicommon.com/2015/07/common-raises-7-35m-to-make-housing-better/" %>
+      <div class ="blogone">
+      Common Raises $7.35M to Make Housing Better
+      </div>
+    </div>
+    <div class = "buffed">
+    </div>
+    
+
+
 
 
 

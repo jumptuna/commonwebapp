@@ -15,11 +15,7 @@
     height:1em;
     width: 100%;
   }
-  .inner {
-    border-bottom-width: .1em;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-  }
+  
   .btn {
     padding-right: 3em;
     padding-left: 3em;
@@ -30,30 +26,73 @@
     font-size: 14pt;
   }
   .field2{
-    height: 10em;
-    overflow: auto;
+    padding-bottom: 1em;
+    
 
+  }
+
+.inner {
+  
+    float: right;
+    margin: 0 auto;
+    margin-top: 0;
+    z-index: 999;
+    background-color: white;
+    opacity: 10%;
+    height: 3em;
+    width: 100%;
+    position: fixed;
+
+    
+  }
+    .logo{
+    
+    opacity: 100%;
+    margin-right: 28em;
+  }
+  .l, .si, .su{
+    opacity: 100%;
+    font-size: 18px;
+    margin-right: 5em;
+    color: black;
+    font-weight: lighter;
+    font-style: arial;
+  }
+  .buff{
+    height: .75em;
+  }
+  .list{
+    text-align: center;
+    display:block;
+  }
+  .run{
+    margin-top: 5em;
   }
 
   </style>
 </head>
 <body>
-<section class="section section-community full-width">
+
     <div class="bg-hero">
         <div class="inner">
-            <h2>Sign Up</h2>
-
-            <p>
-                At Common, you’re not just a member — you’re part of a community that cares.
-                <p>
-                Here you can view other members in your area, see their interests, and contact them before you move in.</p>
-            </p>
+            <div class = "buff">
+            </div>
 
             
+              <%= link_to image_tag('top_logo.png'), home_path, {:class => "logo"} %>
+            
+              
+            
+            
+              <%=link_to 'Sign Up', signup_path, {:class => "su"} %>   <%=link_to 'Sign In', signin_path, {:class => "si"} %>    <%=link_to 'Members', list_path, {:class => "l"} %> 
+            
+            
         </div>
+        <div class ="col-sm-12 run">
+
         
         <%= render "users/registrations/new" %>
-        
+        </div>
         <div type="buttons" class="btn btn-default">
                 <%=link_to 'Back', home_path %> 
 
@@ -62,7 +101,7 @@
         
     </div>
 
-</section>
+
 
 
 

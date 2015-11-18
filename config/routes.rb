@@ -8,6 +8,7 @@ Rails.application.routes.draw do
    get "aftersignin" => "users/sessions#signin", as: "after_signin"
    get "viewuser/(:id)" => "pages#viewuser", as: "viewuser"
    get "signout" => "pages#signout", as: "signout"
+   get "gobacktoprofile" => "pages#currentuser", as: "cu"
 
    root to: "pages#home"
   devise_for :users, controllers: { sessions: "users/sessions", registrations: 'users/registrations' }

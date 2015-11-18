@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<style>
+.bg-hero {
+    text-align: center;
+    font-size: 18pt;
+  }
+.inner {
+  
+    float: right;
+    margin: 0 auto;
+    margin-top: 0;
+    z-index: 999;
+    background-color: white;
+    opacity: 10%;
+    height: 3em;
+    width: 100%;
+    position: fixed;
+
+    
+  }
+    .logo{
+    
+    opacity: 100%;
+    margin-right: 28em;
+  }
+  .l, .si, .su{
+    opacity: 100%;
+    font-size: 18px;
+    margin-right: 5em;
+    color: black;
+    font-weight: lighter;
+    font-style: arial;
+  }
+  .buff{
+    height: .75em;
+  }
+  .list{
+  	text-align: center;
+  	display:block;
+  }
+  .buffer{
+  	height: 15em;
+  }
+  .people{
+  	height: 20em;
+  	background-color: lightblue;
+
+
+  }
+</style>
+</head>
+<body>
+<div class="bg-hero">
+<div class="inner">
+            
+            <div class = "buff">
+            </div>
+
+            
+              <%= link_to image_tag('top_logo.png'), home_path, {:class => "logo"} %>
+            
+              
+            
+            
+              <%=link_to 'Sign Up', signup_path, {:class => "su"} %>   <%=link_to 'Sign In', signin_path, {:class => "si"} %>    <%=link_to 'Members', list_path, {:class => "l"} %> 
+            
+           
+</div>
+</div>
+<div class = "buffer">
+            </div>
+
+<div class = "list">
+
 <%= render "/users/list/list" %>
+
+</div>
+
+</body>
+</html>
