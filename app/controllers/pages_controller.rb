@@ -40,7 +40,8 @@ class PagesController < ActionController::Base
     
     # for loading list of nearby users
   end
-
+  def events
+  end
   def signout
     sign_out current_user
     @id = 0

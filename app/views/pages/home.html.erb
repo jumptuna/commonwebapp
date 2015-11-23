@@ -13,15 +13,17 @@
   }
   .inner {
   
-    float: right;
+    /*float: right;*/
     margin: 0 auto;
     margin-top: 0;
     z-index: 999;
     background-color: white;
     opacity: 10%;
-    height: 3em;
+    min-height: 3em;
     width: 100%;
     position: fixed;
+      
+
 
     
   }
@@ -80,12 +82,13 @@
   }
   .otext {
     background-image: url("http://orig15.deviantart.net/70d4/f/2012/108/8/6/teal_windows_8_bubbles_background_by_gifteddeviant-d4wkij8.png");
-    height: 10em;
+    min-height: 7em;
     text-align: center;
     font-size: 26px;
     display:inline-block;
     color: white;
     font-weight: lighter;
+    padding-bottom: 3em;
     
 
 
@@ -109,23 +112,79 @@
     margin: 0 auto;
     width: 11em;
     padding-top: 2em;
-    height: 10em;
+    height: 6em;
   }
   .blog{
     width:11em;
-    margin-left: 14.65em;
+  
+    
   }
   .title{
     text-align: center;
     font-size: 18pt;
     font-weight: lighter;
-    
     padding-bottom: 2em;
+
+    
   }
   .buffed{
     height: 10em;
 
   }
+  .descrip{
+    width: 11em;
+    padding-bottom: 2em;
+    text-align: center;
+
+  }
+  .bgheroimage{
+    background-image: url("assets/bcg_hero_membership_community.jpg");
+    background-size: 133.655em 75em;
+
+    font-size: 16px;
+    height: 40em;
+  }
+  .testimonial{
+    margin: 0 auto;
+
+  }
+  .blog1{
+    width: 11em;
+   
+    
+    
+
+  }
+  .cup1{
+    width: 5em;
+    
+  }
+  .options{
+    width: 17em;
+    margin-right: 0;
+    
+  }
+  .l{
+    margin-right: 0;
+  }
+  .su{
+    margin-left: 0;
+  }
+  .median{
+    height: 1em;
+  }
+  .blue{
+    height: 10em;
+  }
+  .center{
+    height: 10em;
+  }
+  .centered{
+    margin: 0 auto;
+    min-height: 30em;
+    width: 70em;
+  }
+
 
   </style>
   
@@ -134,8 +193,7 @@
 
     <div class="bg-hero">
         <div class="inner">
-            
-            <div class = "buff">
+           <div class = "buff">
             </div>
 
             
@@ -146,12 +204,14 @@
             
               <%=link_to 'Sign Up', signup_path, {:class => "su"} %>   <%=link_to 'Sign In', signin_path, {:class => "si"} %>    <%=link_to 'Members', list_path, {:class => "l"} %> 
             
-           
+            
+        
         </div>
-        
-        
+        <div class = "col-sm-12 bgheroimage">
+        </div>
+       <!-- 
         <%= image_tag("bcg_hero_membership_community", :class => "headerimage")%>
-       
+       -->
         <!-- <div class "wraphi">
         <%= image_tag("bcg_hero_membership", :class => "headerimage")%>
         </div>
@@ -175,43 +235,71 @@
                 Here you can view other members in your area, see their interests, and contact them before you move in.</p>
                 </p>
     </div>
+    
+    
     <%= image_tag("Screen Shot 2015-11-16 at 3.32.18 PM", :class => "testimonial")%>
     
+    
     <!-- REPLACE BLOG POSTS AS MORE IMPORTANT ONES APPEAR -->
-
-    <div class = "title">
+    <div class = "centered">
+    <div class = "col-sm-12 title">
         <p>
-        Check out our blog
+        <%= link_to "Check out our blog", "http://blog.hicommon.com/" %>
         </p>
     </div>
+    <div class = "col-sm-12">
+    </div>
+     
     
-    <div class = "col-sm-2 blog">
+    
+    <div class = "centered">
+      
+    <div class = "col-sm-2 blog1">
       
       <%= link_to image_tag('ONBOARD.jpg', :class => "one"), "http://blog.hicommon.com/2015/11/how-we-onboard-members/" %>
       <div class ="blogone">
       
-      How We Onboard Members
+      <%= link_to "How We Onboard Members", "http://blog.hicommon.com/2015/11/how-we-onboard-members/" %>
       </div>
-
-    </div>
+      <div class = "descrip">
+      At Common, we’ve set out to improve the way we live together by providing fully furnished homes with flexible month-to-month terms at an all-in-one price. As we built out our first property...
+      </div>
+      
     
+    </div>
+    <div class = "col-sm-3 blue">
+    </div>
+   
+
+  
     <div class = "col-sm-2 blog">
       
       <%= link_to image_tag('1162.jpg', :class => "two"), "http://blog.hicommon.com/2015/10/hello-1162-pacific-street/" %>
       <div class ="blogone">
-      Hello 1162 Pacific Street
+      <%= link_to "Hello 1162 Pacific Street", "http://blog.hicommon.com/2015/10/hello-1162-pacific-street/" %>
+      </div>
+      <div class = "descrip">
+      We started Common to address the need for housing that is flexible, user-friendly, and community-driven. Our mission is to rethink housing from the ground up, answering the question of...
       </div>
     </div>
+    
+     <div class = "col-sm-3 blue">
+    </div>
+    
     
     <div class = "col-sm-2 blog">
       
       <%= link_to image_tag('moneybag.jpg', :class => "three"), "http://blog.hicommon.com/2015/07/common-raises-7-35m-to-make-housing-better/" %>
       <div class ="blogone">
-      Common Raises $7.35M to Make Housing Better
+      <%= link_to "Common Raises $7.35M to Make Housing Better", "http://blog.hicommon.com/2015/07/common-raises-7-35m-to-make-housing-better/" %>
+      </div>
+      <div class = "descrip">
+      Choosing an apartment is the most expensive decision many of us make every year. Yet we face time pressure, limited and distorted information and an all-around poor customer experience...
       </div>
     </div>
-    <div class = "buffed">
     </div>
+    </div>
+    
     
 
 

@@ -37,13 +37,12 @@
 }
 .profile{
   border-radius: 30em;
-  
+  background-image: url("https://lh5.googleusercontent.com/-ZadaXoUTBfs/AAAAAAAAAAI/AAAAAAAAAGA/19US52OmBqc/photo.jpg");
   background-size: 100% 100%;
   font-size: 9pt;
     box-shadow: .1em .1em .1em grey;
     height: 12.5em;
     width: 12.5em;
-  padding:0;
     
 }
 .footer{
@@ -176,10 +175,10 @@
   background-size: 100% 100%;
   height: 66em;
 }
-.avatar{
-  height: 12.5em;
-  width: 12.5em;
-  border-radius: 30em;
+.eventlist{
+  height: 50em;
+  background-color: white;
+  box-shadow: .1em .1em .1em grey;
 }
 
 
@@ -196,48 +195,11 @@
     <%= link_to "Sign Out", signout_path %>
   </div>
 </div>
+  <div class = "col-sm-12 eventlist">
 
-<div class = "col-sm-10 col1">
-<div class = "col-sm-12 broad">
-  <div class ="col-sm-12 prof">
-    <div class = "col-sm-4 profile">
-      <%= image_tag @cuser.avatar.url.to_s, {:class => "avatar"} %>
-
-    </div>
-    <div class = "col-sm-8 basicinfo">
-      <p>
-          <%= @cuser.name %>
-      </p>
-      <p>
-          1162 Pacific Street
-      </p>
-    </div>
   </div>
-</div>
 
-<div class = "col-sm-12 bottomwrap">
-  <div class = "col-sm-3 event">
-    <div class = "col-sm-12 eventheader">
-      <%=link_to "Events", events_path %>
-    </div>
-    <div class = "col-sm-12 eventcontent">
-    </div>
-  </div>
-  <div class = "col-sm-8 bio">
-  Bio: <%= @cuser.info %>
-  </div>
-</div>
-</div>
-<div class = "col-sm-2 list">
-<div class = "col-sm-12 listhead">
 
-Members
-
-</div>
-<div class = "col-sm-12 innerlist">
-<%= render "users/list/list2" %>
-</div>
-</div>
 </div>
 <div class = "col-sm-12 footer">
 <p></p>

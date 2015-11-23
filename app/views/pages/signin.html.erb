@@ -7,9 +7,7 @@
   <title>Sign In</title>
 
   <style>
-  body {
-    /*background-image: url("http://images.123hdwallpapers.com/20150430/city-background-hd-1600x1000.jpg");*/
-  }
+  
   .bg-hero {
     text-align: center;
     font-size: 18pt;
@@ -33,7 +31,7 @@
   }
   .inner {
   
-    float: right;
+    /*float: right;*/
     margin: 0 auto;
     margin-top: 0;
     z-index: 999;
@@ -62,11 +60,38 @@
     height: .75em;
   }
   .run{
-    margin-top: 5em;
-    height: 14em;
+   
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+    font-size: 12pt;
+  }
+  .buffs{
+    height: .7em;
+  }
+  .field{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+  }
+   
+ 
     
-    margin-left: 18.5em;
-    border-radius: 1em;
+  
+  .options{
+    width: 17em;
+    margin-right: 0;
+    
+  }
+  .l{
+    margin-right: 0;
+  }
+  .su{
+    margin-left: 0;
+  }
+  .median{
+    height: 1em;
+  }
+  .margin {
+    height: 11em;
   }
 
  
@@ -90,16 +115,17 @@
             
         
         </div>
-        <div class = "col-sm-4 run">
+        <div class = "col-sm-12 margin">
+        </div>
+        <div class = "col-sm-12 run">
         <p>
         </p>
 
         <%= render "users/sessions/new" %>
         </div>
        
-        <div type="buttons" class="btn btn-default">
-
-                <%=link_to 'Back', home_path %> 
-            </div>
+        
 
     </div>
+</body>
+</html>

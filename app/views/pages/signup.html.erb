@@ -7,6 +7,7 @@
   <title>Sign Up</title>
 
   <style>
+
   .bg-hero {
     text-align: center;
     font-size: 18pt;
@@ -33,15 +34,16 @@
 
 .inner {
   
-    float: right;
+    /*float: right;*/
     margin: 0 auto;
     margin-top: 0;
     z-index: 999;
     background-color: white;
     opacity: 10%;
-    height: 3em;
+    min-height: 3em;
     width: 100%;
     position: fixed;
+    box-shadow: .1em .1em .1em grey;
 
     
   }
@@ -66,7 +68,39 @@
     display:block;
   }
   .run{
-    margin-top: 5em;
+    
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+    font-size: 12pt;
+
+    
+
+  }
+  .buffs{
+    height: .7em;
+  }
+  .field{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+  }
+  
+  
+  .options{
+    width: 17em;
+    margin-right: 0;
+    
+  }
+  .l{
+    margin-right: 0;
+  }
+  .su{
+    margin-left: 0;
+  }
+  .median{
+    height: 1em;
+  }
+  .margin{
+    height: 7em;
   }
 
   </style>
@@ -75,7 +109,7 @@
 
     <div class="bg-hero">
         <div class="inner">
-            <div class = "buff">
+           <div class = "buff">
             </div>
 
             
@@ -87,16 +121,16 @@
               <%=link_to 'Sign Up', signup_path, {:class => "su"} %>   <%=link_to 'Sign In', signin_path, {:class => "si"} %>    <%=link_to 'Members', list_path, {:class => "l"} %> 
             
             
+        
+        </div>
+        <div class ="col-sm-12 margin">
         </div>
         <div class ="col-sm-12 run">
 
         
         <%= render "users/registrations/new" %>
         </div>
-        <div type="buttons" class="btn btn-default">
-                <%=link_to 'Back', home_path %> 
-
-            </div>
+        
             
         
     </div>

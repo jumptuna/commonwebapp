@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
 
   before_action :debug
   protect_from_forgery with: :exception
+  before_filter :configure_permitted_parameters, if: :devise_controller?
+
+
   
 
   def debug
@@ -19,7 +22,7 @@ class ApplicationController < ActionController::Base
    protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :info, :email, :password) }
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,:info, :email, :password) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :info, :email, :password, :avatar, :avatar_cache) }
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,:info, :email, :password, :avatar, :avatar_cache) }
   end
 end
