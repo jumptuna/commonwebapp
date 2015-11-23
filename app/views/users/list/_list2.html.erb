@@ -4,7 +4,7 @@
 	
     <p>
     
-       <%= link_to (image_tag (user.avatar.url.to_s)), { :action => "profile", :id => @x, :class => "profphoto"} %> 
+       <%= link_to (image_tag (user.avatar.url.to_s), :class => "profphoto"), { :action => "profile", :id => @x} %> 
 
         <%= link_to user.name, { :action => "profile", :id => @x }%>
        
