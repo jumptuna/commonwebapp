@@ -11,10 +11,19 @@ class PagesController < ActionController::Base
     @log = true
   end
   def signup
+    if @signedin == true or current_user != nil
+      redirect_to profile_path
+    end
   end
   def signin
+    if @signedin == true or current_user != nil
+      redirect_to profile_path
+    end
   end
   def list
+    if @signedin == true or current_user != nil
+      redirect_to profile_path
+    end
   	@users = User.all
   end
   def viewuser

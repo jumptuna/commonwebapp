@@ -22,6 +22,7 @@
     min-height: 3em;
     width: 100%;
     position: fixed;
+    box-shadow: .1em .1em .1em grey;
       
 
 
@@ -103,6 +104,7 @@
     border-radius: 10em;
     text-align: center;
 
+
   }
   .blogone{
     
@@ -115,7 +117,8 @@
     height: 6em;
   }
   .blog{
-    width:11em;
+    
+    
   
     
   }
@@ -135,6 +138,7 @@
     width: 11em;
     padding-bottom: 2em;
     text-align: center;
+    margin: 0 auto;
 
   }
   .bgheroimage{
@@ -148,13 +152,7 @@
     margin: 0 auto;
 
   }
-  .blog1{
-    width: 11em;
-   
-    
-    
 
-  }
   .cup1{
     width: 5em;
     
@@ -184,12 +182,16 @@
     min-height: 30em;
     width: 70em;
   }
+  .colu{
+    text-align: center;
+  }
 
 
   </style>
   
 </head>
 <body>
+ 
 
     <div class="bg-hero">
         <div class="inner">
@@ -240,8 +242,9 @@
     <%= image_tag("Screen Shot 2015-11-16 at 3.32.18 PM", :class => "testimonial")%>
     
     
+    
     <!-- REPLACE BLOG POSTS AS MORE IMPORTANT ONES APPEAR -->
-    <div class = "centered">
+    
     <div class = "col-sm-12 title">
         <p>
         <%= link_to "Check out our blog", "http://blog.hicommon.com/" %>
@@ -252,9 +255,10 @@
      
     
     
-    <div class = "centered">
-      
-    <div class = "col-sm-2 blog1">
+   <div class = "colu">
+    <div class = "col-sm-2">
+    </div>
+    <div class = "col-sm-2 blog">
       
       <%= link_to image_tag('ONBOARD.jpg', :class => "one"), "http://blog.hicommon.com/2015/11/how-we-onboard-members/" %>
       <div class ="blogone">
@@ -267,23 +271,25 @@
       
     
     </div>
-    <div class = "col-sm-3 blue">
+    <div class = "col-sm-1 blue">
     </div>
    
 
   
     <div class = "col-sm-2 blog">
-      
+      <p>
       <%= link_to image_tag('1162.jpg', :class => "two"), "http://blog.hicommon.com/2015/10/hello-1162-pacific-street/" %>
+
       <div class ="blogone">
       <%= link_to "Hello 1162 Pacific Street", "http://blog.hicommon.com/2015/10/hello-1162-pacific-street/" %>
       </div>
       <div class = "descrip">
       We started Common to address the need for housing that is flexible, user-friendly, and community-driven. Our mission is to rethink housing from the ground up, answering the question of...
-      </div>
+      </div> 
+      </p>
     </div>
     
-     <div class = "col-sm-3 blue">
+     <div class = "col-sm-1 blue">
     </div>
     
     
@@ -297,8 +303,9 @@
       Choosing an apartment is the most expensive decision many of us make every year. Yet we face time pressure, limited and distorted information and an all-around poor customer experience...
       </div>
     </div>
-    </div>
-    </div>
+  </div>
+
+   
     
     
 

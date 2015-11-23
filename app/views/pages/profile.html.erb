@@ -36,7 +36,8 @@
 
 }
 .profile{
-  border-radius: 30em;
+  
+  border-width: 0em;
   
   background-size: 100% 100%;
   font-size: 9pt;
@@ -52,6 +53,7 @@
   height: 8.3em;
   margin-top: 1em;
   text-align: center;
+  padding: 0;
 
 
 
@@ -61,8 +63,9 @@
 }
     
 .prof{
-  margin-left: 8em;
-    margin-top: 7em;
+  margin-left: 5em;
+    margin-top: 4em;
+    width: 36em;
 }
 .basicinfo{
   margin-top: 1em;
@@ -80,7 +83,7 @@
   box-shadow: .1em .1em .1em grey;
 }
 .header{
-  background-color: white;
+  background-color: rgb(100, 220, 255);
   box-shadow: .1em .1em .1em grey;
   
   height: 5em;
@@ -111,6 +114,7 @@
   height: 3em;
 
   padding: 0;
+  
   /*border-width: 1em;
   border-color: black;
   border- width*/
@@ -118,17 +122,20 @@
   background-color: white;
   text-align: center;
   margin-bottom: 1em;
+
   
 }
 .innerlist{
   overflow: auto;
   height: 44.99em;
+  text-align: left;
   
   background-color: white;
   box-shadow: .1em .1em .1em grey;
   margin: 0;
-  padding: 0;
-  overflow: auto;
+  padding: .2em;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .bio {
   font-size: 14pt;
@@ -172,14 +179,78 @@
   box-shadow: .1em .1em .1em grey;
 }
 .background{
-  background-image: url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/2/25/25156/snow_mountains-f.jpg?1372590906");
+  background-color: rgba(245, 245, 245, 1);
   background-size: 100% 100%;
   height: 66em;
 }
 .avatar{
   height: 12.5em;
   width: 12.5em;
-  border-radius: 30em;
+  
+  border-width: 0em;
+}
+.profphoto{
+  height: 2.4em;
+  width: 2.4em;
+}
+.buffline{
+  height: 1.5em;
+}
+.commonlogo{
+  position: absolute;
+}
+.logos{
+ height: 20em;
+  width: 80em;
+  margin-left: 5em;
+  margin-top: 14em;
+
+}
+.logos2{
+ height: 20em;
+  width: 80em;
+  margin-left: 96em;
+  margin-top: 14em;
+
+}
+.commonlogo2{
+  position:absolute;
+}
+.outline1{
+  width: 42em;
+  height: 21em;
+  border-width: .3em;
+  border-style: solid;
+  border-color: rgb(61, 72, 139);
+  margin: 0 auto;
+  margin-top: 1.5em;
+
+}
+.outline2{
+  height: 2.2em;
+  width: 8em;
+  border-width: .2em;
+  border-style: solid;
+  border-color: rgb(61, 72, 139);
+  margin-top: .4em;
+  margin-left: .4em;
+  padding-top: .2em;
+}
+.outline3{
+  margin: 0 auto;
+  margin-top: .675em;
+  height: 7em;
+
+  
+  border-width: .2em;
+  border-style: solid;
+  border-color: rgb(61, 72, 139);
+  padding: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+
+
+
 }
 
 
@@ -187,6 +258,14 @@
 </head>
 <body>
 <div class = "background">
+<!-- <div class = "commonlogo">
+  <%= image_tag "logo", {:class => "logos"}%>
+  
+
+</div>
+<div class = "commonlogo2">
+<%= image_tag "logo", {:class => "logos2"}%>
+</div> -->
 <div class = "wrapper">
 <div class = "col-sm-12 header">
   <div class = "col-sm-2 logo1">
@@ -199,6 +278,8 @@
 
 <div class = "col-sm-10 col1">
 <div class = "col-sm-12 broad">
+  <div class = "outline1">
+  
   <div class ="col-sm-12 prof">
     <div class = "col-sm-4 profile">
       <%= image_tag @cuser.avatar.url.to_s, {:class => "avatar"} %>
@@ -212,6 +293,7 @@
           1162 Pacific Street
       </p>
     </div>
+    </div>
   </div>
 </div>
 
@@ -224,28 +306,43 @@
     </div>
   </div>
   <div class = "col-sm-8 bio">
-  Bio: <%= @cuser.info %>
+  <%= @cuser.info %>
   </div>
 </div>
 </div>
 <div class = "col-sm-2 list">
+
 <div class = "col-sm-12 listhead">
+<div class = "outline2">
 
 Members
-
 </div>
+</div>
+
 <div class = "col-sm-12 innerlist">
+
 <%= render "users/list/list2" %>
+
 </div>
 </div>
 </div>
 <div class = "col-sm-12 footer">
-<p></p>
-<div class = "col-sm-5">
-</div>
-<div class = "col-sm-2 weare">
-We Are Common
-</div>
+  
+  <div class = "col-sm-12 outline3">
+      <p></p>
+      <div class = "col-sm-4">
+      </div>
+      <div class = "col-sm-4 weare">
+      We Are Common
+      </div>
+      <div class = "col-sm-12 buffline">
+      </div>
+      <div class = "col-sm-5">
+      </div>
+      <div class = "col-sm-2">
+      <%= link_to "Edit", edit_user_registration_path %>
+      </div>
+  </div>
 </div>
 </div>
 

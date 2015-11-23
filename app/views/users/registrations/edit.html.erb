@@ -1,7 +1,104 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<!DOCTYPE html>
+<html>
+<head>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+<style>
+.editphoto{
+  height: 12.5em;
+  width:12.5em;
+}
+.center{
+  margin: 0 auto;
+  width: 20em;
+  text-align: center;
+}
+#user_avatar{
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 3.75em;
+}
+.buff{
+    height: .75em;
+  }
+.logo{
+    
+    opacity: 100%;
+    margin-right: 28em;
+  }
+  .l, .si, .su{
+    opacity: 100%;
+    font-size: 18px;
+    margin-right: 5em;
+    color: black;
+    font-weight: lighter;
+    font-style: arial;
+}
+.l{
+    margin-right: 0;
+  }
+  .su{
+    margin-left: 0;
+  }
+.inner {
+  
+    /*float: right;*/
+    margin: 0 auto;
+    margin-top: 0;
+    z-index: 999;
+    background-color: white;
+    opacity: 10%;
+    min-height: 3em;
+    width: 100%;
+    position: fixed;
+    box-shadow: .1em .1em .1em grey;
+
+    
+  }
+  .bg-hero {
+    text-align: center;
+    font-size: 18pt;
+  }
+  .margin{
+    height: 10em;
+  }
+  .actions{
+    margin-bottom: 5em
+  }
+
+</style>
+</head>
+<body>
+<div class = "bg-hero">
+ <div class="inner">
+           <div class = "buff">
+            </div>
+
+            
+              <%= link_to image_tag('top_logo.png'), home_path, {:class => "logo"} %>
+            
+              
+            
+            
+              <%=link_to 'Sign Up', signup_path, {:class => "su"} %>   <%=link_to 'Sign In', signin_path, {:class => "si"} %>    <%=link_to 'Members', list_path, {:class => "l"} %> 
+</div>
+</div>
+<div class = "col-sm-12 margin">
+</div>
+
+<div class = "center">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
+  
+    <%= image_tag current_user.avatar.url.to_s, {:class => "editphoto"} %>
+  
+  <div class = "field">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -12,15 +109,29 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <div class = "field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :info %><br />
+    <%= f.text_field :info, autocomplete: "off" %>
+  </div>
+
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-
+  
+  
+  
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+
+  
 
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
@@ -32,8 +143,9 @@
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+</div>
 
-<%= link_to "Back", :back %>
+</body>
+</html>
+
