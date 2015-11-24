@@ -175,6 +175,7 @@
     background-color: white;
     height: 3.5em;
     box-shadow: .1em .1em .1em grey;
+    padding-top: .85em;
 
     }
     .eventcontent {
@@ -257,6 +258,11 @@
 
 
     }
+    .eventscolor{
+    color: rgb(61, 72, 139);
+    font-weight: bold;
+    font-size: 11.5pt;
+    }
 
 
   </style>
@@ -304,7 +310,7 @@
 <div class = "col-sm-12 bottomwrap">
   <div class = "col-sm-3 event">
     <div class = "col-sm-12 eventheader">
-      <%=link_to "Events", events_path %>
+      <%=link_to "Events", events_path, {:class => "eventscolor"} %>
     </div>
     <div class = "col-sm-12 eventcontent">
     </div>
