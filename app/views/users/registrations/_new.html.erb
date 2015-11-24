@@ -27,21 +27,20 @@
 
   <div class="field">
     <%= f.label :building %><br />
-    <%= f.text_field :building, autocomplete: "off" %>
-  </div>
+    <div class = "controls">
+      <%= f.select(:building, options_for_select([['1162 Pacific Street', '1162 Pacific Street'], ['375 Chauncey', '375 Chauncey']])) %>
+    </div>
 
   <div class = "buffs">
   </div>
 
-  <div class="field2">
+  <div class="field">
     <%= f.label :info %><br />
     <%= f.text_area :info, :cols => "40", :rows => "7", autocomplete: "off" %>
   </div>
   <div class = "buffs">
   </div>
 
-  <div class = "buffs">
-  </div>
 
   <div class="field">
     <%= f.label :password %>
@@ -59,12 +58,6 @@
   </div>
   <div class = "buffs">
   </div>
-
-  
-
- 
-
-  
 
   <div class="actions">
    <%= f.submit 'Sign Up', data: { confirm: 'Your confirm message' } %>
