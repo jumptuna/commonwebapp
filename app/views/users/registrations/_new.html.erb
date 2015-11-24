@@ -26,6 +26,24 @@
   </div>
 
   <div class="field">
+    <%= f.label :building %><br />
+    <%= f.text_field :building, autocomplete: "off" %>
+  </div>
+
+  <div class = "buffs">
+  </div>
+
+  <div class="field2">
+    <%= f.label :info %><br />
+    <%= f.text_area :info, :cols => "40", :rows => "7", autocomplete: "off" %>
+  </div>
+  <div class = "buffs">
+  </div>
+
+  <div class = "buffs">
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -42,12 +60,11 @@
   <div class = "buffs">
   </div>
 
-  <div class="field2">
-    <%= f.label :info %><br />
-    <%= f.text_area :info, :cols => "40", :rows => "7", autocomplete: "off" %>
-  </div>
-  <div class = "buffs">
-  </div>
+  
+
+ 
+
+  
 
   <div class="actions">
    <%= f.submit 'Sign Up', data: { confirm: 'Your confirm message' } %>

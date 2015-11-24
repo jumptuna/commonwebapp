@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
    protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :info, :email, :password, :avatar, :avatar_cache, :current_password) }
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,:info, :email, :password, :avatar, :avatar_cache, :current_password) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :building, :info, :email, :password, :avatar, :avatar_cache, :current_password) }
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :building, :info, :email, :password, :avatar, :avatar_cache, :current_password) }
   end
 end
